@@ -6,13 +6,40 @@
 	<dict>
 		<key>NoteApp (iOS).xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 		<key>NoteApp (macOS).xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>5A8564B728BE4772006C6B22</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5A8564BD28BE4773006C6B22</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5A8564C428BE4773006C6B22</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5A8564D028BE4773006C6B22</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
