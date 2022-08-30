@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         Text("\(count)")
         Button("Test button") {
-            count += 1
+            count += 2
         }
     }
 }
