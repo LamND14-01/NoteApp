@@ -17,6 +17,9 @@
 		5A8564DC28BE4773006C6B22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8564B228BE4771006C6B22 /* ContentView.swift */; };
 		5A8564DD28BE4773006C6B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A8564B328BE4772006C6B22 /* Assets.xcassets */; };
 		5A8564DE28BE4773006C6B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A8564B328BE4772006C6B22 /* Assets.xcassets */; };
+		5A8564EF28BE49F5006C6B22 /* AppCenterAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5A8564EE28BE49F5006C6B22 /* AppCenterAnalytics */; };
+		5A8564F128BE49F5006C6B22 /* AppCenterCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = 5A8564F028BE49F5006C6B22 /* AppCenterCrashes */; };
+		5A8564F328BE49F5006C6B22 /* AppCenterDistribute in Frameworks */ = {isa = PBXBuildFile; productRef = 5A8564F228BE49F5006C6B22 /* AppCenterDistribute */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A8564EF28BE49F5006C6B22 /* AppCenterAnalytics in Frameworks */,
+				5A8564F128BE49F5006C6B22 /* AppCenterCrashes in Frameworks */,
+				5A8564F328BE49F5006C6B22 /* AppCenterDistribute in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,12 +157,18 @@
 				5A8564B428BE4772006C6B22 /* Sources */,
 				5A8564B528BE4772006C6B22 /* Frameworks */,
 				5A8564B628BE4772006C6B22 /* Resources */,
+				5A8564F428BE4A06006C6B22 /* Run Swiftlint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "NoteApp (iOS)";
+			packageProductDependencies = (
+				5A8564EE28BE49F5006C6B22 /* AppCenterAnalytics */,
+				5A8564F028BE49F5006C6B22 /* AppCenterCrashes */,
+				5A8564F228BE49F5006C6B22 /* AppCenterDistribute */,
+			);
 			productName = "NoteApp (iOS)";
 			productReference = 5A8564B828BE4772006C6B22 /* NoteApp.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +261,9 @@
 				Base,
 			);
 			mainGroup = 5A8564AB28BE4771006C6B22;
+			packageReferences = (
+				5A8564ED28BE49F5006C6B22 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */,
+			);
 			productRefGroup = 5A8564B928BE4772006C6B22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,6 +308,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A8564F428BE4A06006C6B22 /* Run Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swiftlint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A8564B428BE4772006C6B22 /* Sources */ = {
@@ -703,6 +739,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A8564ED28BE49F5006C6B22 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/microsoft/appcenter-sdk-apple";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A8564EE28BE49F5006C6B22 /* AppCenterAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A8564ED28BE49F5006C6B22 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			productName = AppCenterAnalytics;
+		};
+		5A8564F028BE49F5006C6B22 /* AppCenterCrashes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A8564ED28BE49F5006C6B22 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			productName = AppCenterCrashes;
+		};
+		5A8564F228BE49F5006C6B22 /* AppCenterDistribute */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A8564ED28BE49F5006C6B22 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			productName = AppCenterDistribute;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A8564AC28BE4771006C6B22 /* Project object */;
 }

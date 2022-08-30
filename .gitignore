@@ -1,0 +1,24 @@
+# Mac
+.DS_Store
+
+# Xcode
+build/*
+*.pbxuser
+!default.pbxuser
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+DerivedData/*
+
+#build
+*.ipa
+*.app.dSYM.zip
+swiftlint.result.json
+*.mobileprovision
+fastlane/report.xml
+fastlane/test_output/*
+
+#carthage
+Carthage/*

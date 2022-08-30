@@ -1,0 +1,14 @@
+disabled_rules:
+  - identififer_name
+  
+opt_in_rules:
+  - empty_count
+  
+excluded:
+  - Carthange
+  - Pods
+  
+line_lenght:
+  warning: 150
+  error: 200
+
