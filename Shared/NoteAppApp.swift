@@ -26,7 +26,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             Analytics.self,
             Crashes.self
         ])
-        
         return true
     }
 }

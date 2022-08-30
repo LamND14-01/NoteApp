@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var count = 1
+    @State var count = 0
     var body: some View {
         Text("\(count)")
         Button("Test button") {
