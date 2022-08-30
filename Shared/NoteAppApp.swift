@@ -22,7 +22,7 @@ struct NoteAppApp: App {
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        AppCenter.start(withAppSecret: "", services: [
+        AppCenter.start(withAppSecret: "700dbc04-84b9-41d0-89f3-a29b0fca2fc6", services: [
             Analytics.self,
             Crashes.self
         ])
