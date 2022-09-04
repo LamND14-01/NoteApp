@@ -1,5 +1,5 @@
 //
-//  NoteAppApp.swift
+//  NoteApp.swift
 //  Shared
 //
 //  Created by Eloo on 8/30/22.
@@ -11,10 +11,10 @@ import AppCenterAnalytics
 import AppCenterCrashes
 
 @main
-struct NoteAppApp: App {
+struct NoteApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreen()
         }
     }
 }
@@ -26,7 +26,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             Analytics.self,
             Crashes.self
         ])
-        
         return true
     }
 }
