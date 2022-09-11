@@ -52,6 +52,8 @@ struct TabBarButton: View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .scaleEffect(selectedTab == image ? 1.5 : 1)
+            .animation(.interpolatingSpring(stiffness: 1000, damping: 20), value: selectedTab)
         }
         .frame(height: 60)
         

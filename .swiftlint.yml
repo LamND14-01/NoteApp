@@ -1,5 +1,15 @@
 disabled_rules:
-  - identififer_name
+  # - colon
+  - comma
+  # - control_statement
+  - force_cast
+  - large_tuple
+  - notification_center_detachment
+  - nesting
+  - function_parameter_count
+  - trailing_whitespace
+  - multiple_closures_with_trailing_closure
+
   
 opt_in_rules:
   - empty_count

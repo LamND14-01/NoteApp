@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A23635328C63BB4002B531D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635228C63BB4002B531D /* CalendarView.swift */; };
+		5A23635428C63BB4002B531D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635228C63BB4002B531D /* CalendarView.swift */; };
+		5A23635528C63BB4002B531D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635228C63BB4002B531D /* CalendarView.swift */; };
+		5A23635628C63BB4002B531D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635228C63BB4002B531D /* CalendarView.swift */; };
+		5A23635928C63FFB002B531D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635828C63FFB002B531D /* DateExtension.swift */; };
+		5A23635A28C63FFB002B531D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635828C63FFB002B531D /* DateExtension.swift */; };
+		5A23635B28C63FFB002B531D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635828C63FFB002B531D /* DateExtension.swift */; };
+		5A23635C28C63FFB002B531D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635828C63FFB002B531D /* DateExtension.swift */; };
+		5A23635E28C640F4002B531D /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635D28C640F4002B531D /* DateValue.swift */; };
+		5A23635F28C640F4002B531D /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635D28C640F4002B531D /* DateValue.swift */; };
+		5A23636028C640F4002B531D /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635D28C640F4002B531D /* DateValue.swift */; };
+		5A23636128C640F4002B531D /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635D28C640F4002B531D /* DateValue.swift */; };
 		5A2B4D8028C4DCE700DBDA9E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B4D7F28C4DCE700DBDA9E /* HomeScreen.swift */; };
 		5A2B4D8128C4DCE700DBDA9E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B4D7F28C4DCE700DBDA9E /* HomeScreen.swift */; };
 		5A2B4D8228C4DCE800DBDA9E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B4D7F28C4DCE700DBDA9E /* HomeScreen.swift */; };
@@ -19,9 +31,6 @@
 		5A8564DA28BE4773006C6B22 /* NoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8564B128BE4771006C6B22 /* NoteApp.swift */; };
 		5A8564DD28BE4773006C6B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A8564B328BE4772006C6B22 /* Assets.xcassets */; };
 		5A8564DE28BE4773006C6B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A8564B328BE4772006C6B22 /* Assets.xcassets */; };
-		5A8564EF28BE49F5006C6B22 /* AppCenterAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5A8564EE28BE49F5006C6B22 /* AppCenterAnalytics */; };
-		5A8564F128BE49F5006C6B22 /* AppCenterCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = 5A8564F028BE49F5006C6B22 /* AppCenterCrashes */; };
-		5A8564F328BE49F5006C6B22 /* AppCenterDistribute in Frameworks */ = {isa = PBXBuildFile; productRef = 5A8564F228BE49F5006C6B22 /* AppCenterDistribute */; };
 		5ACF349E28C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF349D28C4E1BD00B62312 /* CurrentTaskScreen.swift */; };
 		5ACF349F28C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF349D28C4E1BD00B62312 /* CurrentTaskScreen.swift */; };
 		5ACF34A028C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF349D28C4E1BD00B62312 /* CurrentTaskScreen.swift */; };
@@ -66,6 +75,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A23635228C63BB4002B531D /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		5A23635828C63FFB002B531D /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		5A23635D28C640F4002B531D /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
 		5A2B4D7F28C4DCE700DBDA9E /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		5A2B4D8428C4DDDD00DBDA9E /* NoteApp--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NoteApp--iOS--Info.plist"; sourceTree = "<group>"; };
 		5A8564B128BE4771006C6B22 /* NoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteApp.swift; sourceTree = "<group>"; };
@@ -92,9 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A8564EF28BE49F5006C6B22 /* AppCenterAnalytics in Frameworks */,
-				5A8564F128BE49F5006C6B22 /* AppCenterCrashes in Frameworks */,
-				5A8564F328BE49F5006C6B22 /* AppCenterDistribute in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +131,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A23635728C63FDD002B531D /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5A23635828C63FFB002B531D /* DateExtension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		5A2B4D7A28C4DB4400DBDA9E /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				5ACF34B328C4E52C00B62312 /* PageTag.swift */,
+				5A23635D28C640F4002B531D /* DateValue.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				5A2B4D8428C4DDDD00DBDA9E /* NoteApp--iOS--Info.plist */,
-				5ACF349B28C4DE6B00B62312 /* Info */,
 				5A8564B028BE4771006C6B22 /* Shared */,
 				5A8564BF28BE4773006C6B22 /* macOS */,
 				5A8564C828BE4773006C6B22 /* Tests iOS */,
@@ -228,13 +245,6 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
-		5ACF349B28C4DE6B00B62312 /* Info */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Info;
-			sourceTree = "<group>";
-		};
 		5ACF349C28C4E19600B62312 /* CurrentTaskScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				5ACF34A328C4E1E400B62312 /* CalendarScreen.swift */,
+				5A23635228C63BB4002B531D /* CalendarView.swift */,
 			);
 			path = CalendarScreen;
 			sourceTree = "<group>";
@@ -262,6 +273,7 @@
 		5ACF34C128C4F92100B62312 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5A23635728C63FDD002B531D /* extensions */,
 				5ACF34C228C4F92800B62312 /* Constant */,
 			);
 			path = Common;
@@ -293,9 +305,6 @@
 			);
 			name = "NoteApp (iOS)";
 			packageProductDependencies = (
-				5A8564EE28BE49F5006C6B22 /* AppCenterAnalytics */,
-				5A8564F028BE49F5006C6B22 /* AppCenterCrashes */,
-				5A8564F228BE49F5006C6B22 /* AppCenterDistribute */,
 			);
 			productName = "NoteApp (iOS)";
 			productReference = 5A8564B828BE4772006C6B22 /* NoteApp.app */;
@@ -390,7 +399,6 @@
 			);
 			mainGroup = 5A8564AB28BE4771006C6B22;
 			packageReferences = (
-				5A8564ED28BE49F5006C6B22 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */,
 			);
 			productRefGroup = 5A8564B928BE4772006C6B22 /* Products */;
 			projectDirPath = "";
@@ -464,10 +472,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ACF34AA28C4E20300B62312 /* SettingScreen.swift in Sources */,
+				5A23635928C63FFB002B531D /* DateExtension.swift in Sources */,
+				5A23635E28C640F4002B531D /* DateValue.swift in Sources */,
 				5A8564D928BE4773006C6B22 /* NoteApp.swift in Sources */,
 				5ACF34B928C4EC6D00B62312 /* TabBarView.swift in Sources */,
 				5ACF34C428C4F94100B62312 /* Constant.swift in Sources */,
 				5ACF34B428C4E52C00B62312 /* PageTag.swift in Sources */,
+				5A23635328C63BB4002B531D /* CalendarView.swift in Sources */,
 				5ACF34A428C4E1E400B62312 /* CalendarScreen.swift in Sources */,
 				5ACF349E28C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */,
 				5A2B4D8028C4DCE700DBDA9E /* HomeScreen.swift in Sources */,
@@ -479,10 +490,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ACF34AB28C4E20300B62312 /* SettingScreen.swift in Sources */,
+				5A23635A28C63FFB002B531D /* DateExtension.swift in Sources */,
+				5A23635F28C640F4002B531D /* DateValue.swift in Sources */,
 				5A8564DA28BE4773006C6B22 /* NoteApp.swift in Sources */,
 				5ACF34BA28C4EC6D00B62312 /* TabBarView.swift in Sources */,
 				5ACF34C528C4F94100B62312 /* Constant.swift in Sources */,
 				5ACF34B528C4E52C00B62312 /* PageTag.swift in Sources */,
+				5A23635428C63BB4002B531D /* CalendarView.swift in Sources */,
 				5ACF34A528C4E1E400B62312 /* CalendarScreen.swift in Sources */,
 				5ACF349F28C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */,
 				5A2B4D8128C4DCE700DBDA9E /* HomeScreen.swift in Sources */,
@@ -493,13 +507,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A23635528C63BB4002B531D /* CalendarView.swift in Sources */,
 				5ACF34AC28C4E20300B62312 /* SettingScreen.swift in Sources */,
 				5ACF34B628C4E52C00B62312 /* PageTag.swift in Sources */,
 				5ACF34C628C4F94100B62312 /* Constant.swift in Sources */,
 				5ACF34BB28C4EC6D00B62312 /* TabBarView.swift in Sources */,
 				5ACF34A028C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */,
+				5A23635B28C63FFB002B531D /* DateExtension.swift in Sources */,
 				5A8564CC28BE4773006C6B22 /* Tests_iOSLaunchTests.swift in Sources */,
 				5ACF34A628C4E1E400B62312 /* CalendarScreen.swift in Sources */,
+				5A23636028C640F4002B531D /* DateValue.swift in Sources */,
 				5A8564CA28BE4773006C6B22 /* Tests_iOS.swift in Sources */,
 				5A2B4D8228C4DCE800DBDA9E /* HomeScreen.swift in Sources */,
 			);
@@ -509,13 +526,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A23635628C63BB4002B531D /* CalendarView.swift in Sources */,
 				5ACF34AD28C4E20300B62312 /* SettingScreen.swift in Sources */,
 				5ACF34B728C4E52C00B62312 /* PageTag.swift in Sources */,
 				5ACF34C728C4F94100B62312 /* Constant.swift in Sources */,
 				5ACF34BC28C4EC6D00B62312 /* TabBarView.swift in Sources */,
 				5ACF34A128C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */,
+				5A23635C28C63FFB002B531D /* DateExtension.swift in Sources */,
 				5A8564D828BE4773006C6B22 /* Tests_macOSLaunchTests.swift in Sources */,
 				5ACF34A728C4E1E400B62312 /* CalendarScreen.swift in Sources */,
+				5A23636128C640F4002B531D /* DateValue.swift in Sources */,
 				5A8564D628BE4773006C6B22 /* Tests_macOS.swift in Sources */,
 				5A2B4D8328C4DCE800DBDA9E /* HomeScreen.swift in Sources */,
 			);
@@ -895,35 +915,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		5A8564ED28BE49F5006C6B22 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/microsoft/appcenter-sdk-apple";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		5A8564EE28BE49F5006C6B22 /* AppCenterAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5A8564ED28BE49F5006C6B22 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
-			productName = AppCenterAnalytics;
-		};
-		5A8564F028BE49F5006C6B22 /* AppCenterCrashes */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5A8564ED28BE49F5006C6B22 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
-			productName = AppCenterCrashes;
-		};
-		5A8564F228BE49F5006C6B22 /* AppCenterDistribute */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5A8564ED28BE49F5006C6B22 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
-			productName = AppCenterDistribute;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A8564AC28BE4771006C6B22 /* Project object */;
 }

@@ -19,11 +19,8 @@ struct HomeScreen: View {
                 SettingScreen()
                     .tag(PageTag.setting)
             }
-            .background(.cyan)
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .gesture(DragGesture())
             TabBarView(selectedTab: $selection)
-                
         }
         .ignoresSafeArea()
     }
