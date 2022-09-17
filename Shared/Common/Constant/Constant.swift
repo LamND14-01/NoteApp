@@ -41,11 +41,12 @@ private extension UIEdgeInsets {
 }
 
 struct Constant {
-    static let sizeWidth =  UIApplication.shared.keyWindow?.frame.size.width
-    static let sizeHeight =  UIApplication.shared.keyWindow?.frame.size.height
-    static let colorBlack: String =  "black"
-    static let colorPurple: String =  "purple"
-    static let colorGreen: String =  "green"
-    static let colorGray: String =  "gray"
-    
+    static let sizeWidth = UIApplication.shared.keyWindow?.frame.size.width
+    static let sizeHeight = UIApplication.shared.keyWindow?.frame.size.height
+    static let colorBlack: String = "black"
+    static let colorPurple: String = "purple"
+    static let colorGreen: String = "green"
+    static let colorGray: String = "gray"
+    static let colorRed: String = "red"
+    static let dateFormat: String = "yyyy-MM-dd'T'HH:mm:ss"
 }

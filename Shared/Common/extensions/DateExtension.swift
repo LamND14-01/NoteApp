@@ -18,4 +18,20 @@ extension Date {
             return calendar.date(byAdding: .day, value: day - 1, to: startDate)!
         })
     }
+    
+    func getStringDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = Constant.dateFormat
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale.current
+        return dateFormatter.string(from: self)
+    }
+    
+    func getHour() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale.current
+        return dateFormatter.string(from: self)
+    }
 }

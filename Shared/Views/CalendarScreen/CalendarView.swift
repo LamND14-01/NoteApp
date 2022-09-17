@@ -14,6 +14,7 @@ struct CalendarView: View {
     @Binding var currentDate: Date
     @State var currentMonth = 0
     @State var swipeable: Bool = true
+    @Binding var selectedDate: Date
     
     var body: some View {
         
@@ -31,6 +32,7 @@ struct CalendarView: View {
                     Spacer()
                     Button {
                         currentMonth = 0
+                        selectedDate = Date()
                     } label: {
                         Text("Today")
                             .font(.callout)
@@ -89,13 +91,31 @@ struct CalendarView: View {
     
     @ViewBuilder
     func cardView(value: DateValue) ->some View {
-        VStack(spacing: 0) {
+        VStack(alignment: .center, spacing: 0) {
             if value.day != -1 {
                 Text("\(value.day)")
                     .font(.title3.bold())
                     .foregroundColor(.white)
             }
         }
+        .frame(width: 36, height: 36)
+        .background {
+            if isSameDate(date1: value.date, date2: selectedDate), value.day != -1 {
+                Circle()
+                    .fill(Color(Constant.colorRed))
+            }
+        }
+        .onTapGesture {
+            selectedDate = value.date
+        }
+    }
+    
+    func isSameDate(date1: Date, date2: Date) -> Bool {
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+        let date3 =  calendar.date(bySettingHour: 00, minute: 00, second: 00, of: date1)!
+        let date4 =  calendar.date(bySettingHour: 00, minute: 00, second: 00, of: date2)!
+        return calendar.isDate(date3, inSameDayAs: date4)
     }
     
     func extractData() -> [String] {
@@ -108,6 +128,7 @@ struct CalendarView: View {
     }
     
     func getCurrentMonth() -> Date {
+        // from current date, update month from self.currentMonth
         let calendar = Calendar.current
         guard let currentMonth = calendar.date(byAdding: .month, value: self.currentMonth, to: Date()) else {
             return Date()
@@ -122,12 +143,13 @@ struct CalendarView: View {
         
         var days = currentMonth.getAllDates().compactMap { date -> DateValue in
             let day = calendar.component(.day, from: date)
-            return DateValue(day: day, date: date)
+            let date2 = Calendar.current.date(byAdding: .day, value: 1, to: date)!
+            return DateValue(day: day, date: date2)
         }
         
         let firstWeekday = calendar.component(.weekday, from: days.first?.date ?? Date())
         
-        for _ in 0..<(firstWeekday - 1) {
+        for _ in 0..<(firstWeekday - 2) {
             days.insert(DateValue(day: -1, date: Date()), at: 0)
         }
         return days
@@ -136,6 +158,6 @@ struct CalendarView: View {
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView(currentDate: .constant(Date()))
+        CalendarView(currentDate: .constant(Date()), selectedDate: .constant(Date()))
     }
 }
