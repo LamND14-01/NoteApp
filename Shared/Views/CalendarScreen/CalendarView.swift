@@ -113,9 +113,7 @@ struct CalendarView: View {
     func isSameDate(date1: Date, date2: Date) -> Bool {
         var calendar = Calendar.current
         calendar.timeZone = TimeZone(abbreviation: "UTC")!
-        let date3 =  calendar.date(bySettingHour: 00, minute: 00, second: 00, of: date1)!
-        let date4 =  calendar.date(bySettingHour: 00, minute: 00, second: 00, of: date2)!
-        return calendar.isDate(date3, inSameDayAs: date4)
+        return calendar.isDate(date1.startOfDay(), inSameDayAs: date2.startOfDay())
     }
     
     func extractData() -> [String] {

@@ -34,4 +34,16 @@ extension Date {
         dateFormatter.locale = Locale.current
         return dateFormatter.string(from: self)
     }
+    
+    func startOfDay() -> Date {
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+        return calendar.date(bySettingHour: 00, minute: 00, second: 00, of: self)!
+    }
+    
+    func endOfDay() -> Date {
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+        return calendar.date(bySettingHour: 23, minute: 59, second: 59, of: self)!
+    }
 }
