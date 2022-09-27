@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     macos:
-      xcode: "13.4.1"
+      xcode: "14.0.1"
     working_directory: /Users/distiller/project
     environment:
       SCAN_DEVICE: iPhone 13
