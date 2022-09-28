@@ -24,7 +24,7 @@ struct CalendarView: View {
                     HStack {
                         Text("\(extractData()[1])")
                             .font(.title3.bold())
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(Constant.colorGray))
                         Text("\(extractData()[0])")
                             .font(.title3.bold())
                             .foregroundColor(.white)
@@ -145,9 +145,9 @@ struct CalendarView: View {
             return DateValue(day: day, date: date2)
         }
         
-        let firstWeekday = calendar.component(.weekday, from: days.first?.date ?? Date())
+        let firstWeekday = calendar.component(.weekday, from: days.first?.date.startOfDay() ?? Date())
         
-        for _ in 0..<(firstWeekday - 2) {
+        for _ in 0..<(firstWeekday - 1) {
             days.insert(DateValue(day: -1, date: Date()), at: 0)
         }
         return days
