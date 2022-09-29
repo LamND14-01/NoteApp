@@ -55,7 +55,9 @@ class TaskRespository: ObservableObject {
             return
         }
         store.collection(path).document(taskID).delete() { error in
-            print("Unable to update task: \(error?.localizedDescription ?? "")")
+            if let error = error {
+                print("Unable to update task: \(error.localizedDescription)")
+            }
         }
     }
     
