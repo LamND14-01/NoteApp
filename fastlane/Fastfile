@@ -6,14 +6,9 @@ platform :ios do
     setup_circle_ci
   end
 
-  desc "Runs all the tests"
-  lane :test do
-    scan
-  end
-
-  desc "Ad-hoc build"
-  lane :adhoc do
-    match(type: "adhoc")
-    gym(export_method: "ad-hoc")
+  desc "Run tests under NoteApp target"
+  lane :build_and_test do
+    scheme: "NoteApp",
+    device: "iPhone 14"
   end
 end
