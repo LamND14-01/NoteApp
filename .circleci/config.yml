@@ -11,7 +11,7 @@ jobs:
     environment:
       SCAN_DEVICE: iPhone 14
       FL_OUTPUT_DIR: output
-      FASTLANE_LANE: test
+      FASTLANE_LANE: build_and_test
       FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 180
       FASTLANE_XCODEBUILD_SETTINGS_RETRIES: 10
     shell: /bin/bash --login -o pipefail
