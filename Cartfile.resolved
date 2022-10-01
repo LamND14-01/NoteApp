@@ -1,0 +1,7 @@
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseAnalyticsBinary.json" "9.6.0"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseAuthBinary.json" "9.6.0"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseCrashlyticsBinary.json" "9.6.0"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseDynamicLinksBinary.json" "9.6.0"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseFirestoreBinary.json" "9.6.0"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseMessagingBinary.json" "9.6.0"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseProtobufBinary.json" "7.6.0"
