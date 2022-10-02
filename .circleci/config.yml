@@ -18,7 +18,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: spm-cache-{{ checksum "NoteApp.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" }}
+          key: spm-cache-{{ checksum "Package.resolved" }}
       - ruby/install-deps
       - run:
           name: Install missing gems
@@ -29,7 +29,7 @@ jobs:
       - save_cache:
           paths:
             - SourcePackages/
-          key: spm-cache-{{ checksum "NoteApp.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" }}
+          key: spm-cache-{{ checksum "Package.resolved" }}
       - store_artifacts:
           path: output
       - store_test_results:
