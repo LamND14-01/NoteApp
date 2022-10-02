@@ -8,91 +8,58 @@
 
 /* Begin PBXBuildFile section */
 		5A23635328C63BB4002B531D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635228C63BB4002B531D /* CalendarView.swift */; };
-		5A23635428C63BB4002B531D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635228C63BB4002B531D /* CalendarView.swift */; };
 		5A23635528C63BB4002B531D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635228C63BB4002B531D /* CalendarView.swift */; };
-		5A23635628C63BB4002B531D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635228C63BB4002B531D /* CalendarView.swift */; };
 		5A23635928C63FFB002B531D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635828C63FFB002B531D /* DateExtension.swift */; };
-		5A23635A28C63FFB002B531D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635828C63FFB002B531D /* DateExtension.swift */; };
 		5A23635B28C63FFB002B531D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635828C63FFB002B531D /* DateExtension.swift */; };
-		5A23635C28C63FFB002B531D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635828C63FFB002B531D /* DateExtension.swift */; };
 		5A23635E28C640F4002B531D /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635D28C640F4002B531D /* DateValue.swift */; };
-		5A23635F28C640F4002B531D /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635D28C640F4002B531D /* DateValue.swift */; };
 		5A23636028C640F4002B531D /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635D28C640F4002B531D /* DateValue.swift */; };
-		5A23636128C640F4002B531D /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635D28C640F4002B531D /* DateValue.swift */; };
 		5A2B4D8028C4DCE700DBDA9E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B4D7F28C4DCE700DBDA9E /* HomeScreen.swift */; };
-		5A2B4D8128C4DCE700DBDA9E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B4D7F28C4DCE700DBDA9E /* HomeScreen.swift */; };
 		5A2B4D8228C4DCE800DBDA9E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B4D7F28C4DCE700DBDA9E /* HomeScreen.swift */; };
-		5A2B4D8328C4DCE800DBDA9E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B4D7F28C4DCE700DBDA9E /* HomeScreen.swift */; };
 		5A67B3E328DCC4BA00FC8BAE /* CreateTaskScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A67B3E228DCC4BA00FC8BAE /* CreateTaskScreen.swift */; };
+		5A6A469E28E9C90900051DC0 /* FirebaseFunctionsCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 5A6A469D28E9C90900051DC0 /* FirebaseFunctionsCombine-Community */; };
+		5A6A46A028E9C91900051DC0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5A6A469F28E9C91900051DC0 /* FirebaseAuth */; };
+		5A6A46A228E9C92400051DC0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5A6A46A128E9C92400051DC0 /* FirebaseFirestore */; };
+		5A6A46A428E9C93400051DC0 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5A6A46A328E9C93300051DC0 /* FirebaseFirestoreSwift */; };
+		5A6A46A528E9C9AF00051DC0 /* CreateTaskScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A67B3E228DCC4BA00FC8BAE /* CreateTaskScreen.swift */; };
+		5A6A46A628E9CA1D00051DC0 /* TaskRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB4BB828D20E7A000C1003 /* TaskRepositories.swift */; };
+		5A6A46A728E9CA2100051DC0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEA68728E1ECC900970374 /* BaseView.swift */; };
+		5A6A46A828E9CA2700051DC0 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB4BBA28D21DB0000C1003 /* StringExtension.swift */; };
 		5A78386C28E2A0BC000AE50B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78386B28E2A0BC000AE50B /* Category.swift */; };
-		5A78386D28E2A0BC000AE50B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78386B28E2A0BC000AE50B /* Category.swift */; };
 		5A78386E28E2A0BC000AE50B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78386B28E2A0BC000AE50B /* Category.swift */; };
-		5A78386F28E2A0BC000AE50B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78386B28E2A0BC000AE50B /* Category.swift */; };
 		5A78387128E2CC20000AE50B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78387028E2CC20000AE50B /* Router.swift */; };
-		5A78387228E2CC20000AE50B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78387028E2CC20000AE50B /* Router.swift */; };
 		5A78387328E2CC20000AE50B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78387028E2CC20000AE50B /* Router.swift */; };
-		5A78387428E2CC20000AE50B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78387028E2CC20000AE50B /* Router.swift */; };
 		5A78387628E2D898000AE50B /* NaviBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78387528E2D898000AE50B /* NaviBar.swift */; };
-		5A78387728E2D898000AE50B /* NaviBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78387528E2D898000AE50B /* NaviBar.swift */; };
 		5A78387828E2D898000AE50B /* NaviBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78387528E2D898000AE50B /* NaviBar.swift */; };
-		5A78387928E2D898000AE50B /* NaviBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78387528E2D898000AE50B /* NaviBar.swift */; };
 		5A78387F28E33BE0000AE50B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78387E28E33BE0000AE50B /* HomeViewModel.swift */; };
-		5A78388028E33BE0000AE50B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78387E28E33BE0000AE50B /* HomeViewModel.swift */; };
 		5A78388128E33BE0000AE50B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78387E28E33BE0000AE50B /* HomeViewModel.swift */; };
-		5A78388228E33BE0000AE50B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78387E28E33BE0000AE50B /* HomeViewModel.swift */; };
 		5A7F874728DDDF470075AA95 /* CreateTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F874628DDDF470075AA95 /* CreateTaskViewModel.swift */; };
-		5A7F874828DDDF470075AA95 /* CreateTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F874628DDDF470075AA95 /* CreateTaskViewModel.swift */; };
 		5A7F874928DDDF470075AA95 /* CreateTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F874628DDDF470075AA95 /* CreateTaskViewModel.swift */; };
-		5A7F874A28DDDF470075AA95 /* CreateTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F874628DDDF470075AA95 /* CreateTaskViewModel.swift */; };
 		5A8564CA28BE4773006C6B22 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8564C928BE4773006C6B22 /* Tests_iOS.swift */; };
 		5A8564CC28BE4773006C6B22 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8564CB28BE4773006C6B22 /* Tests_iOSLaunchTests.swift */; };
-		5A8564D628BE4773006C6B22 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8564D528BE4773006C6B22 /* Tests_macOS.swift */; };
-		5A8564D828BE4773006C6B22 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8564D728BE4773006C6B22 /* Tests_macOSLaunchTests.swift */; };
 		5A8564D928BE4773006C6B22 /* NoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8564B128BE4771006C6B22 /* NoteApp.swift */; };
-		5A8564DA28BE4773006C6B22 /* NoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8564B128BE4771006C6B22 /* NoteApp.swift */; };
 		5A8564DD28BE4773006C6B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A8564B328BE4772006C6B22 /* Assets.xcassets */; };
-		5A8564DE28BE4773006C6B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A8564B328BE4772006C6B22 /* Assets.xcassets */; };
 		5ACB4BB928D20E7A000C1003 /* TaskRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB4BB828D20E7A000C1003 /* TaskRepositories.swift */; };
 		5ACB4BBB28D21DB0000C1003 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB4BBA28D21DB0000C1003 /* StringExtension.swift */; };
 		5ACF349E28C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF349D28C4E1BD00B62312 /* CurrentTaskScreen.swift */; };
-		5ACF349F28C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF349D28C4E1BD00B62312 /* CurrentTaskScreen.swift */; };
 		5ACF34A028C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF349D28C4E1BD00B62312 /* CurrentTaskScreen.swift */; };
-		5ACF34A128C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF349D28C4E1BD00B62312 /* CurrentTaskScreen.swift */; };
 		5ACF34A428C4E1E400B62312 /* CalendarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34A328C4E1E400B62312 /* CalendarScreen.swift */; };
-		5ACF34A528C4E1E400B62312 /* CalendarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34A328C4E1E400B62312 /* CalendarScreen.swift */; };
 		5ACF34A628C4E1E400B62312 /* CalendarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34A328C4E1E400B62312 /* CalendarScreen.swift */; };
-		5ACF34A728C4E1E400B62312 /* CalendarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34A328C4E1E400B62312 /* CalendarScreen.swift */; };
 		5ACF34AA28C4E20300B62312 /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34A928C4E20300B62312 /* SettingScreen.swift */; };
-		5ACF34AB28C4E20300B62312 /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34A928C4E20300B62312 /* SettingScreen.swift */; };
 		5ACF34AC28C4E20300B62312 /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34A928C4E20300B62312 /* SettingScreen.swift */; };
-		5ACF34AD28C4E20300B62312 /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34A928C4E20300B62312 /* SettingScreen.swift */; };
 		5ACF34B428C4E52C00B62312 /* PageTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34B328C4E52C00B62312 /* PageTag.swift */; };
-		5ACF34B528C4E52C00B62312 /* PageTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34B328C4E52C00B62312 /* PageTag.swift */; };
 		5ACF34B628C4E52C00B62312 /* PageTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34B328C4E52C00B62312 /* PageTag.swift */; };
-		5ACF34B728C4E52C00B62312 /* PageTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34B328C4E52C00B62312 /* PageTag.swift */; };
 		5ACF34B928C4EC6D00B62312 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34B828C4EC6D00B62312 /* TabBarView.swift */; };
-		5ACF34BA28C4EC6D00B62312 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34B828C4EC6D00B62312 /* TabBarView.swift */; };
 		5ACF34BB28C4EC6D00B62312 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34B828C4EC6D00B62312 /* TabBarView.swift */; };
-		5ACF34BC28C4EC6D00B62312 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34B828C4EC6D00B62312 /* TabBarView.swift */; };
 		5ACF34C428C4F94100B62312 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34C328C4F94100B62312 /* Constant.swift */; };
-		5ACF34C528C4F94100B62312 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34C328C4F94100B62312 /* Constant.swift */; };
 		5ACF34C628C4F94100B62312 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34C328C4F94100B62312 /* Constant.swift */; };
-		5ACF34C728C4F94100B62312 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF34C328C4F94100B62312 /* Constant.swift */; };
 		5ADEA68828E1ECC900970374 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEA68728E1ECC900970374 /* BaseView.swift */; };
 		5AE33F2128CF77B60085C778 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE33F2028CF77B60085C778 /* ViewExtension.swift */; };
-		5AE33F2228CF77B60085C778 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE33F2028CF77B60085C778 /* ViewExtension.swift */; };
 		5AE33F2328CF77B60085C778 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE33F2028CF77B60085C778 /* ViewExtension.swift */; };
-		5AE33F2428CF77B60085C778 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE33F2028CF77B60085C778 /* ViewExtension.swift */; };
 		5AE33F2628CF78FA0085C778 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE33F2528CF78FA0085C778 /* Task.swift */; };
-		5AE33F2728CF78FA0085C778 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE33F2528CF78FA0085C778 /* Task.swift */; };
 		5AE33F2828CF78FA0085C778 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE33F2528CF78FA0085C778 /* Task.swift */; };
-		5AE33F2928CF78FA0085C778 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE33F2528CF78FA0085C778 /* Task.swift */; };
 		5AE33F2F28CF7FCC0085C778 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE33F2E28CF7FCC0085C778 /* CalendarViewModel.swift */; };
-		5AE33F3028CF7FCC0085C778 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE33F2E28CF7FCC0085C778 /* CalendarViewModel.swift */; };
 		5AE33F3128CF7FCC0085C778 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE33F2E28CF7FCC0085C778 /* CalendarViewModel.swift */; };
-		5AE33F3228CF7FCC0085C778 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE33F2E28CF7FCC0085C778 /* CalendarViewModel.swift */; };
 		5AEC96EA28D0D8A0002348BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AEC96E928D0D8A0002348BF /* GoogleService-Info.plist */; };
-		5AEC96EB28D0D8A0002348BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AEC96E928D0D8A0002348BF /* GoogleService-Info.plist */; };
 		5AEC96EE28D0DEC2002348BF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5AEC96ED28D0DEC2002348BF /* FirebaseAuth */; };
 		5AEC96F028D0DEC2002348BF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5AEC96EF28D0DEC2002348BF /* FirebaseFirestore */; };
 		5AEC96F228D0DEC2002348BF /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 5AEC96F128D0DEC2002348BF /* FirebaseFirestoreCombine-Community */; };
@@ -106,13 +73,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5A8564B728BE4772006C6B22;
 			remoteInfo = "NoteApp (iOS)";
-		};
-		5A8564D228BE4773006C6B22 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5A8564AC28BE4771006C6B22 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5A8564BD28BE4773006C6B22;
-			remoteInfo = "NoteApp (macOS)";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -131,12 +91,10 @@
 		5A8564B128BE4771006C6B22 /* NoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteApp.swift; sourceTree = "<group>"; };
 		5A8564B328BE4772006C6B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A8564B828BE4772006C6B22 /* NoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A8564BE28BE4773006C6B22 /* NoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8564C028BE4773006C6B22 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		5A8564C528BE4773006C6B22 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8564C928BE4773006C6B22 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		5A8564CB28BE4773006C6B22 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
-		5A8564D128BE4773006C6B22 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8564D528BE4773006C6B22 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		5A8564D728BE4773006C6B22 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		5ACB4BB828D20E7A000C1003 /* TaskRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepositories.swift; sourceTree = "<group>"; };
@@ -166,24 +124,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A8564BB28BE4773006C6B22 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5A8564C228BE4773006C6B22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5A8564CE28BE4773006C6B22 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				5A6A469E28E9C90900051DC0 /* FirebaseFunctionsCombine-Community in Frameworks */,
+				5A6A46A028E9C91900051DC0 /* FirebaseAuth in Frameworks */,
+				5A6A46A228E9C92400051DC0 /* FirebaseFirestore in Frameworks */,
+				5A6A46A428E9C93400051DC0 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +206,13 @@
 			path = CreateTaskScreen;
 			sourceTree = "<group>";
 		};
+		5A6A469C28E9C90900051DC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5A8564AB28BE4771006C6B22 = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +222,7 @@
 				5A8564C828BE4773006C6B22 /* Tests iOS */,
 				5A8564D428BE4773006C6B22 /* Tests macOS */,
 				5A8564B928BE4772006C6B22 /* Products */,
+				5A6A469C28E9C90900051DC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -290,9 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				5A8564B828BE4772006C6B22 /* NoteApp.app */,
-				5A8564BE28BE4773006C6B22 /* NoteApp.app */,
 				5A8564C528BE4773006C6B22 /* Tests iOS.xctest */,
-				5A8564D128BE4773006C6B22 /* Tests macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -393,7 +347,6 @@
 				5A8564B428BE4772006C6B22 /* Sources */,
 				5A8564B528BE4772006C6B22 /* Frameworks */,
 				5A8564B628BE4772006C6B22 /* Resources */,
-				5A6A466528E9923700051DC0 /* Run Script for CircleCI caching */,
 			);
 			buildRules = (
 			);
@@ -410,23 +363,6 @@
 			productReference = 5A8564B828BE4772006C6B22 /* NoteApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5A8564BD28BE4773006C6B22 /* NoteApp (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5A8564E428BE4773006C6B22 /* Build configuration list for PBXNativeTarget "NoteApp (macOS)" */;
-			buildPhases = (
-				5A8564BA28BE4773006C6B22 /* Sources */,
-				5A8564BB28BE4773006C6B22 /* Frameworks */,
-				5A8564BC28BE4773006C6B22 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "NoteApp (macOS)";
-			productName = "NoteApp (macOS)";
-			productReference = 5A8564BE28BE4773006C6B22 /* NoteApp.app */;
-			productType = "com.apple.product-type.application";
-		};
 		5A8564C428BE4773006C6B22 /* Tests iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A8564E728BE4773006C6B22 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
@@ -441,26 +377,14 @@
 				5A8564C728BE4773006C6B22 /* PBXTargetDependency */,
 			);
 			name = "Tests iOS";
+			packageProductDependencies = (
+				5A6A469D28E9C90900051DC0 /* FirebaseFunctionsCombine-Community */,
+				5A6A469F28E9C91900051DC0 /* FirebaseAuth */,
+				5A6A46A128E9C92400051DC0 /* FirebaseFirestore */,
+				5A6A46A328E9C93300051DC0 /* FirebaseFirestoreSwift */,
+			);
 			productName = "Tests iOS";
 			productReference = 5A8564C528BE4773006C6B22 /* Tests iOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		5A8564D028BE4773006C6B22 /* Tests macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5A8564EA28BE4773006C6B22 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
-			buildPhases = (
-				5A8564CD28BE4773006C6B22 /* Sources */,
-				5A8564CE28BE4773006C6B22 /* Frameworks */,
-				5A8564CF28BE4773006C6B22 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5A8564D328BE4773006C6B22 /* PBXTargetDependency */,
-			);
-			name = "Tests macOS";
-			productName = "Tests macOS";
-			productReference = 5A8564D128BE4773006C6B22 /* Tests macOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -476,16 +400,9 @@
 					5A8564B728BE4772006C6B22 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
-					5A8564BD28BE4773006C6B22 = {
-						CreatedOnToolsVersion = 13.2.1;
-					};
 					5A8564C428BE4773006C6B22 = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 5A8564B728BE4772006C6B22;
-					};
-					5A8564D028BE4773006C6B22 = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 5A8564BD28BE4773006C6B22;
 					};
 				};
 			};
@@ -506,9 +423,7 @@
 			projectRoot = "";
 			targets = (
 				5A8564B728BE4772006C6B22 /* NoteApp (iOS) */,
-				5A8564BD28BE4773006C6B22 /* NoteApp (macOS) */,
 				5A8564C428BE4773006C6B22 /* Tests iOS */,
-				5A8564D028BE4773006C6B22 /* Tests macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -523,15 +438,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A8564BC28BE4773006C6B22 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5A8564DE28BE4773006C6B22 /* Assets.xcassets in Resources */,
-				5AEC96EB28D0D8A0002348BF /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5A8564C328BE4773006C6B22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -539,35 +445,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A8564CF28BE4773006C6B22 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5A6A466528E9923700051DC0 /* Run Script for CircleCI caching */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script for CircleCI caching";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# This is to support CircleCI SPM caching\ncp NoteApp.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved Package.resolved\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A8564B428BE4772006C6B22 /* Sources */ = {
@@ -600,32 +478,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A8564BA28BE4773006C6B22 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5A78388028E33BE0000AE50B /* HomeViewModel.swift in Sources */,
-				5ACF34AB28C4E20300B62312 /* SettingScreen.swift in Sources */,
-				5A23635A28C63FFB002B531D /* DateExtension.swift in Sources */,
-				5A23635F28C640F4002B531D /* DateValue.swift in Sources */,
-				5A8564DA28BE4773006C6B22 /* NoteApp.swift in Sources */,
-				5ACF34BA28C4EC6D00B62312 /* TabBarView.swift in Sources */,
-				5ACF34C528C4F94100B62312 /* Constant.swift in Sources */,
-				5A7F874828DDDF470075AA95 /* CreateTaskViewModel.swift in Sources */,
-				5A78386D28E2A0BC000AE50B /* Category.swift in Sources */,
-				5AE33F3028CF7FCC0085C778 /* CalendarViewModel.swift in Sources */,
-				5AE33F2228CF77B60085C778 /* ViewExtension.swift in Sources */,
-				5A78387228E2CC20000AE50B /* Router.swift in Sources */,
-				5ACF34B528C4E52C00B62312 /* PageTag.swift in Sources */,
-				5AE33F2728CF78FA0085C778 /* Task.swift in Sources */,
-				5A23635428C63BB4002B531D /* CalendarView.swift in Sources */,
-				5ACF34A528C4E1E400B62312 /* CalendarScreen.swift in Sources */,
-				5A78387728E2D898000AE50B /* NaviBar.swift in Sources */,
-				5ACF349F28C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */,
-				5A2B4D8128C4DCE700DBDA9E /* HomeScreen.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5A8564C128BE4773006C6B22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -636,10 +488,12 @@
 				5A78388128E33BE0000AE50B /* HomeViewModel.swift in Sources */,
 				5ACF34C628C4F94100B62312 /* Constant.swift in Sources */,
 				5A78387328E2CC20000AE50B /* Router.swift in Sources */,
+				5A6A46A628E9CA1D00051DC0 /* TaskRepositories.swift in Sources */,
 				5ACF34BB28C4EC6D00B62312 /* TabBarView.swift in Sources */,
 				5ACF34A028C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */,
 				5A23635B28C63FFB002B531D /* DateExtension.swift in Sources */,
 				5A7F874928DDDF470075AA95 /* CreateTaskViewModel.swift in Sources */,
+				5A6A46A528E9C9AF00051DC0 /* CreateTaskScreen.swift in Sources */,
 				5A8564CC28BE4773006C6B22 /* Tests_iOSLaunchTests.swift in Sources */,
 				5ACF34A628C4E1E400B62312 /* CalendarScreen.swift in Sources */,
 				5AE33F3128CF7FCC0085C778 /* CalendarViewModel.swift in Sources */,
@@ -647,36 +501,11 @@
 				5A23636028C640F4002B531D /* DateValue.swift in Sources */,
 				5A8564CA28BE4773006C6B22 /* Tests_iOS.swift in Sources */,
 				5A2B4D8228C4DCE800DBDA9E /* HomeScreen.swift in Sources */,
+				5A6A46A728E9CA2100051DC0 /* BaseView.swift in Sources */,
+				5A6A46A828E9CA2700051DC0 /* StringExtension.swift in Sources */,
 				5A78387828E2D898000AE50B /* NaviBar.swift in Sources */,
 				5AE33F2828CF78FA0085C778 /* Task.swift in Sources */,
 				5AE33F2328CF77B60085C778 /* ViewExtension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5A8564CD28BE4773006C6B22 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5A23635628C63BB4002B531D /* CalendarView.swift in Sources */,
-				5ACF34AD28C4E20300B62312 /* SettingScreen.swift in Sources */,
-				5ACF34B728C4E52C00B62312 /* PageTag.swift in Sources */,
-				5A78388228E33BE0000AE50B /* HomeViewModel.swift in Sources */,
-				5ACF34C728C4F94100B62312 /* Constant.swift in Sources */,
-				5A78387428E2CC20000AE50B /* Router.swift in Sources */,
-				5ACF34BC28C4EC6D00B62312 /* TabBarView.swift in Sources */,
-				5ACF34A128C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */,
-				5A23635C28C63FFB002B531D /* DateExtension.swift in Sources */,
-				5A7F874A28DDDF470075AA95 /* CreateTaskViewModel.swift in Sources */,
-				5A8564D828BE4773006C6B22 /* Tests_macOSLaunchTests.swift in Sources */,
-				5ACF34A728C4E1E400B62312 /* CalendarScreen.swift in Sources */,
-				5AE33F3228CF7FCC0085C778 /* CalendarViewModel.swift in Sources */,
-				5A78386F28E2A0BC000AE50B /* Category.swift in Sources */,
-				5A23636128C640F4002B531D /* DateValue.swift in Sources */,
-				5A8564D628BE4773006C6B22 /* Tests_macOS.swift in Sources */,
-				5A2B4D8328C4DCE800DBDA9E /* HomeScreen.swift in Sources */,
-				5A78387928E2D898000AE50B /* NaviBar.swift in Sources */,
-				5AE33F2928CF78FA0085C778 /* Task.swift in Sources */,
-				5AE33F2428CF77B60085C778 /* ViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,11 +516,6 @@
 			isa = PBXTargetDependency;
 			target = 5A8564B728BE4772006C6B22 /* NoteApp (iOS) */;
 			targetProxy = 5A8564C628BE4773006C6B22 /* PBXContainerItemProxy */;
-		};
-		5A8564D328BE4773006C6B22 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5A8564BD28BE4773006C6B22 /* NoteApp (macOS) */;
-			targetProxy = 5A8564D228BE4773006C6B22 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -870,62 +694,6 @@
 			};
 			name = Release;
 		};
-		5A8564E528BE4773006C6B22 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BP2GHWM7V6;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = lamnd.eloo.dev.NoteApp;
-				PRODUCT_NAME = NoteApp;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		5A8564E628BE4773006C6B22 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BP2GHWM7V6;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = lamnd.eloo.dev.NoteApp;
-				PRODUCT_NAME = NoteApp;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		5A8564E828BE4773006C6B22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -934,7 +702,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BP2GHWM7V6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "lamnd.eloo.dev.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -954,7 +722,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BP2GHWM7V6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "lamnd.eloo.dev.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -964,44 +732,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "NoteApp (iOS)";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		5A8564EB28BE4773006C6B22 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BP2GHWM7V6;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "lamnd.eloo.dev.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "NoteApp (macOS)";
-			};
-			name = Debug;
-		};
-		5A8564EC28BE4773006C6B22 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BP2GHWM7V6;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "lamnd.eloo.dev.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "NoteApp (macOS)";
 			};
 			name = Release;
 		};
@@ -1026,29 +756,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A8564E428BE4773006C6B22 /* Build configuration list for PBXNativeTarget "NoteApp (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5A8564E528BE4773006C6B22 /* Debug */,
-				5A8564E628BE4773006C6B22 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5A8564E728BE4773006C6B22 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A8564E828BE4773006C6B22 /* Debug */,
 				5A8564E928BE4773006C6B22 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5A8564EA28BE4773006C6B22 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5A8564EB28BE4773006C6B22 /* Debug */,
-				5A8564EC28BE4773006C6B22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1067,6 +779,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5A6A469D28E9C90900051DC0 /* FirebaseFunctionsCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5AEC96EC28D0DEC2002348BF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFunctionsCombine-Community";
+		};
+		5A6A469F28E9C91900051DC0 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5AEC96EC28D0DEC2002348BF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		5A6A46A128E9C92400051DC0 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5AEC96EC28D0DEC2002348BF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		5A6A46A328E9C93300051DC0 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5AEC96EC28D0DEC2002348BF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		5AEC96ED28D0DEC2002348BF /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5AEC96EC28D0DEC2002348BF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
