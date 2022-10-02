@@ -9,7 +9,9 @@ import SwiftUI
 
 struct CalendarScreen: View {
     @Environment(\.safeAreaInsets) var safeAreaInsets
+    @Environment(\.dismiss) var dismiss
     @ObservedObject var model = Model()
+    @State private var showingSheet = false
     
     let columns = [
         GridItem(.flexible())
@@ -17,35 +19,86 @@ struct CalendarScreen: View {
     
     var body: some View {
         ZStack {
+            Color(Constant.colorBlack)
+                .ignoresSafeArea()
             VStack {
-                Rectangle().frame(width: 0, height: safeAreaInsets.top + 24)
+                Rectangle().frame(width: 0, height: safeAreaInsets.top)
+                NaviBar {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                            .frame(width: 36, height: 36)
+                            .foregroundColor(Color(Constant.colorGray))
+                            .font(.title)
+                    }
+                } centerView: {
+                    Text("Current task")
+                        .font(.title2).bold()
+                        .foregroundColor(Color(Constant.colorGray))
+                }
+                .padding(.horizontal, 8.0)
                 CalendarView(currentDate: $model.currentDate, selectedDate: $model.selectedDate)
-                Rectangle().frame(width: 0, height: 24)
-                ScrollView {
-                    LazyVGrid(columns: columns,spacing: 0) {
+                    .padding(.horizontal, 8.0)
+                if model.filteredTask().isEmpty {
+                    Text("No tasks to do")
+                        .font(.title3).bold()
+                        .foregroundColor(Color(Constant.colorDarkGray))
+                        .padding(.top, 48.0)
+                } else {
+                    List {
                         ForEach(model.filteredTask()) { task in
                             taskView(task: task)
+                                .swipeActions(edge: .leading) {
+                                    Button {
+                                        model.completeTask(task)
+                                    } label: {
+                                        Image(systemName: "checkmark")
+                                    }
+                                    .tint(.green)
+                                }
+                                .swipeActions(edge: .trailing) {
+                                    Button {
+                                        model.deleteTask(task)
+                                    } label: {
+                                        Image(systemName: "trash")
+                                    }
+                                    .tint(.red)
+                                }
                         }
+                        .listRowInsets(.init())
+                        .listRowBackground(Color(hue: 0.683, saturation: 0.015, brightness: 0.138))
                     }
-                    .frame(maxHeight: .infinity)
-                    .padding(.horizontal, 8)
+                    .listRowInsets(.init())
+                    .background(Color(Constant.colorBlack))
+                    .scrollContentBackground(.hidden)
                 }
+                Spacer()
             }
-            .padding(.horizontal, 8)
-            .background(Color(Constant.colorBlack))
-            .ignoresSafeArea()
             VStack(alignment: .trailing) {
                 Spacer()
                 Button {
-                    print("do something")
+                    showingSheet.toggle()
                 } label: {
                     Image(systemName: "plus.circle.fill")
                         .font(.system(size: 60, weight: .medium, design: .default))
+                        .background(content: {
+                            Circle().foregroundColor(Color(Constant.colorGray))
+                                .frame(width: 60)
+                        })
                         .foregroundColor(Color(Constant.colorRed))
-                }.alignTrailing()
-                    .offset(CGSize(width: -10, height: -60))
+                        .alignTrailing()
+                }
+                .offset(CGSize(width: -10, height: -(24 + safeAreaInsets.top)))
+                
+            }
+            .sheet(isPresented: $showingSheet) {
+                CreateTaskScreen(showingSheet: $showingSheet)
+                    .presentationDetents([.height(Constant.sizeHeight! * 2 / 3)])
             }
         }
+        .ignoresSafeArea()
+        .navigationBarHidden(true)
     }
     
     @ViewBuilder
@@ -61,12 +114,12 @@ struct CalendarScreen: View {
                 .foregroundColor(Color(Constant.colorGray))
             Text("\(task.title)")
                 .font(.callout)
-                .foregroundColor(.white)
+                .foregroundColor(Color(Constant.colorGray))
                 .lineLimit(1)
             Spacer()
             Text(task.startDate?.getHour() ?? "")
                 .font(.caption.bold())
-                .foregroundColor(.white)
+                .foregroundColor(Color(Constant.colorGray))
                 .lineLimit(1)
                 .padding(.trailing, 6.0)
         }

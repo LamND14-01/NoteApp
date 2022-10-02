@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct SettingScreen: View {
+    @State var text: String = ""
+    
     var body: some View {
-        Text("SettingScreen")
+        VStack {
+            Rectangle().frame(height: 100)
+                .foregroundColor(.pink)
+            Spacer()
+            TextField("asd", text: self.$text)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .ignoresSafeArea(.keyboard, edges: .bottom)
+            Rectangle().frame(height: 100)
+                .foregroundColor(.pink)
+            
+        }
     }
 }
 

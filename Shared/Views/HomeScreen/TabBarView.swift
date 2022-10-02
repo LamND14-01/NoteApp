@@ -34,7 +34,7 @@ struct TabBarButton: View {
     @Binding var selectedTab: PageTag
     
     var body: some View {
-        GeometryReader { reader in
+        GeometryReader { _ in
             Button(action: {
                 withAnimation {
                     selectedTab = image

@@ -48,5 +48,6 @@ struct Constant {
     static let colorGreen: String = "green"
     static let colorGray: String = "gray"
     static let colorRed: String = "red"
+    static let colorDarkGray: String = "darkGray"
     static let dateFormat: String = "yyyy-MM-dd'T'HH:mm:ss"
 }
