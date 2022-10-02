@@ -393,6 +393,7 @@
 				5A8564B428BE4772006C6B22 /* Sources */,
 				5A8564B528BE4772006C6B22 /* Frameworks */,
 				5A8564B628BE4772006C6B22 /* Resources */,
+				5A6A466528E9923700051DC0 /* Run Script for CircleCI caching */,
 			);
 			buildRules = (
 			);
@@ -546,6 +547,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A6A466528E9923700051DC0 /* Run Script for CircleCI caching */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script for CircleCI caching";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# This is to support CircleCI SPM caching\ncp NoteApp.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved Package.resolved\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A8564B428BE4772006C6B22 /* Sources */ = {
