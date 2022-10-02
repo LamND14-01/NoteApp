@@ -5,7 +5,7 @@ orbs:
 
 jobs:
   build:
-    working_directory: ~/NoteApp
+    working_directory: "~/NoteApp"
     macos:
       xcode: "14.0.1"
     working_directory: /Users/distiller/project
