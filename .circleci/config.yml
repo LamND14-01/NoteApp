@@ -7,7 +7,7 @@ jobs:
   build:
     macos:
       xcode: "14.0.1"
-    working_directory: ~/NoteApp
+    working_directory: /Users/distiller/project
     environment:
       SCAN_DEVICE: iPhone 14
       FL_OUTPUT_DIR: output
@@ -17,25 +17,19 @@ jobs:
     shell: /bin/bash --login -o pipefail
     steps:
       - checkout
+      - restore_cache:
+          key: spm-cache-{{ checksum "Package.resolved" }}
       - ruby/install-deps
       - run:
-         name: Install missing gems
-         command: bundle install
+          name: Install missing gems
+          command: bundle install
       - run:
-         name: Display contents of current path
-         command: ls
-      - restore_cache:
-          key: spm-cache-{{ checksum "NoteApp/Package.resolved" }}
-      - run:
-         name: Bundle install
-         command: bundle install --gemfile="NoteApp/Gemfile"
-      - run:
-          name: Fastlane
-          command: cd NoteApp; bundle exec fastlane $FASTLANE_LANE
+          name: fastlane
+          command: bundle exec fastlane $FASTLANE_LANE
       - save_cache:
           paths:
             - SourcePackages/
-          key: spm-cache-{{ checksum "NoteApp/Package.resolved" }}
+          key: spm-cache-{{ checksum "Package.resolved" }}
       - store_artifacts:
           path: output
       - store_test_results:
