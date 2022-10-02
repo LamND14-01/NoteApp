@@ -17,10 +17,19 @@ jobs:
     shell: /bin/bash --login -o pipefail
     steps:
       - checkout
+      - restore_cache:
+          key: spm-cache-{{ checksum "NoteApp.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" }}
       - ruby/install-deps
+      - run:
+          name: Install missing gems
+          command: bundle install
       - run:
           name: fastlane
           command: bundle exec fastlane $FASTLANE_LANE
+      - save_cache:
+          paths:
+            - SourcePackages/
+          key: spm-cache-{{ checksum "NoteApp.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" }}
       - store_artifacts:
           path: output
       - store_test_results:
