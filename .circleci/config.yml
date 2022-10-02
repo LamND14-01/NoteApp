@@ -5,10 +5,9 @@ orbs:
 
 jobs:
   build:
-    working_directory: "~/NoteApp"
     macos:
       xcode: "14.0.1"
-    working_directory: /Users/distiller/project
+    working_directory: ~/NoteApp
     environment:
       SCAN_DEVICE: iPhone 14
       FL_OUTPUT_DIR: output
