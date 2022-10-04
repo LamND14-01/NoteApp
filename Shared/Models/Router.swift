@@ -8,5 +8,5 @@
 import Foundation
 
 struct Router: Hashable {
-    let screen: String
+    let screen: Screen
 }

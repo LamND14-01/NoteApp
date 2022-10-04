@@ -83,7 +83,7 @@ struct HomeScreen: View {
                     .frame(width: 18, height: 18)
                     .foregroundColor(category.color)
                     .aspectRatio(contentMode: .fit)
-                Text("\(category.title)")
+                Text("\(category.title.rawValue)")
                     .font(.subheadline)
                     .foregroundColor(Color(Constant.colorGray))
                     .padding(.leading, 4.0)
@@ -94,14 +94,12 @@ struct HomeScreen: View {
     @ViewBuilder 
     func navigate(_ router: Router) -> some View {
         switch router.screen {
-        case "Current task":
-            CalendarScreen()
-        case "Important":
-            SettingScreen()
-        case "Completed":
-            SettingScreen()
-        default:
-            SettingScreen()
+        case .currentTask:
+            CalendarScreen(typeScreen: .currentTask)
+        case .important:
+            CalendarScreen(typeScreen: .important)
+        case .completed:
+            CalendarScreen(typeScreen: .completed)
         }
     }
 }

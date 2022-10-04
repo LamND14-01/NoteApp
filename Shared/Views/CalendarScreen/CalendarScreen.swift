@@ -10,12 +10,18 @@ import SwiftUI
 struct CalendarScreen: View {
     @Environment(\.safeAreaInsets) var safeAreaInsets
     @Environment(\.dismiss) var dismiss
-    @ObservedObject var model = Model()
-    @State private var showingSheet = false
+    @StateObject var model = Model()
+    @State private var createSheet = false
+    @State private var detailSheet = false
+    private let typeScreen: Screen
     
     let columns = [
         GridItem(.flexible())
     ]
+    
+    init(typeScreen: Screen) {
+        self.typeScreen = typeScreen
+    }
     
     var body: some View {
         ZStack {
@@ -33,41 +39,78 @@ struct CalendarScreen: View {
                             .font(.title)
                     }
                 } centerView: {
-                    Text("Current task")
+                    Text("\(model.typeScreen?.rawValue ?? "")")
                         .font(.title2).bold()
                         .foregroundColor(Color(Constant.colorGray))
                 }
                 .padding(.horizontal, 8.0)
-                CalendarView(currentDate: $model.currentDate, selectedDate: $model.selectedDate)
-                    .padding(.horizontal, 8.0)
-                if model.filteredTask().isEmpty {
+                if model.typeScreen == .currentTask {
+                    CalendarView(currentDate: $model.currentDate, selectedDate: $model.selectedDate)
+                        .padding(.horizontal, 8.0)
+                }
+
+                if model.filteredTask().isEmpty, model.filteredCompletedTask().isEmpty {
                     Text("No tasks to do")
                         .font(.title3).bold()
                         .foregroundColor(Color(Constant.colorDarkGray))
                         .padding(.top, 48.0)
                 } else {
                     List {
-                        ForEach(model.filteredTask()) { task in
-                            taskView(task: task)
-                                .swipeActions(edge: .leading) {
-                                    Button {
-                                        model.completeTask(task)
-                                    } label: {
-                                        Image(systemName: "checkmark")
-                                    }
-                                    .tint(.green)
+                        if !model.filteredTask().isEmpty {
+                            Section {
+                                ForEach(model.filteredTask()) { task in
+                                    taskView(task: task)
+                                        .swipeActions(edge: .leading) {
+                                            Button {
+                                                model.completeTask(task)
+                                            } label: {
+                                                Image(systemName: "checkmark")
+                                            }
+                                            .tint(.green)
+                                        }
+                                        .swipeActions(edge: .trailing) {
+                                            Button {
+                                                model.deleteTask(task)
+                                            } label: {
+                                                Image(systemName: "trash")
+                                            }
+                                            .tint(Color(Constant.colorRed))
+                                        }
                                 }
-                                .swipeActions(edge: .trailing) {
-                                    Button {
-                                        model.deleteTask(task)
-                                    } label: {
-                                        Image(systemName: "trash")
+                                .listRowInsets(.init())
+                                .listRowBackground(Color(hue: 0.683, saturation: 0.015, brightness: 0.138))
+                            }
+                        }
+                        if !model.filteredCompletedTask().isEmpty, model.typeScreen == .currentTask {
+                            Section(header: Text("Completed task")
+                                .font(.callout).bold()
+                                .foregroundColor(Color(Constant.colorDarkGray))) {
+                                    ForEach(model.filteredCompletedTask()) { task in
+                                        taskView(task: task)
+                                            .swipeActions(edge: .leading) {
+                                                Button {
+                                                    model.completeTask(task)
+                                                } label: {
+                                                    Image(systemName: "checkmark")
+                                                }
+                                                .tint(.green)
+                                            }
+                                            .swipeActions(edge: .trailing) {
+                                                Button {
+                                                    model.deleteTask(task)
+                                                } label: {
+                                                    Image(systemName: "trash")
+                                                }
+                                                .tint(Color(Constant.colorRed))
+                                            }
                                     }
-                                    .tint(.red)
+                                    .listRowInsets(.init())
+                                    .listRowBackground(Color(hue: 0.683, saturation: 0.015, brightness: 0.138))
                                 }
                         }
-                        .listRowInsets(.init())
-                        .listRowBackground(Color(hue: 0.683, saturation: 0.015, brightness: 0.138))
+                        Rectangle()
+                            .frame(width: 0, height: 24 + safeAreaInsets.top)
+                            .listRowBackground(Color(Constant.colorBlack))
                     }
                     .listRowInsets(.init())
                     .background(Color(Constant.colorBlack))
@@ -75,61 +118,90 @@ struct CalendarScreen: View {
                 }
                 Spacer()
             }
-            VStack(alignment: .trailing) {
-                Spacer()
-                Button {
-                    showingSheet.toggle()
-                } label: {
-                    Image(systemName: "plus.circle.fill")
-                        .font(.system(size: 60, weight: .medium, design: .default))
-                        .background(content: {
-                            Circle().foregroundColor(Color(Constant.colorGray))
-                                .frame(width: 60)
-                        })
-                        .foregroundColor(Color(Constant.colorRed))
-                        .alignTrailing()
-                }
-                .offset(CGSize(width: -10, height: -(24 + safeAreaInsets.top)))
-                
+            if model.typeScreen != .completed {
+                createButton()
             }
-            .sheet(isPresented: $showingSheet) {
-                CreateTaskScreen(showingSheet: $showingSheet)
-                    .presentationDetents([.height(Constant.sizeHeight! * 2 / 3)])
-            }
+            
         }
         .ignoresSafeArea()
         .navigationBarHidden(true)
+        .onAppear() {
+            model.typeScreen = typeScreen
+        }
     }
     
     @ViewBuilder
     func taskView(task: TaskValue) ->some View {
         HStack(spacing: 8) {
-            Rectangle()
-                .frame(width: 3, height: 40)
-                .foregroundColor(Color(Constant.colorRed))
-            Image(systemName: "calendar.badge.exclamationmark")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 18, height: 18)
-                .foregroundColor(Color(Constant.colorGray))
-            Text("\(task.title)")
-                .font(.callout)
-                .foregroundColor(Color(Constant.colorGray))
-                .lineLimit(1)
+            if model.isExpired(task.startDate) {
+                Rectangle()
+                    .frame(width: 3, height: 40)
+                    .foregroundColor(task.isSuccess ? .green : .red)
+                Image(systemName: task.isSuccess ? "text.badge.checkmark" : "calendar.badge.exclamationmark")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 18, height: 18)
+                    .foregroundColor(Color(Constant.colorGray))
+            }
+            VStack(alignment: .leading) {
+                Text("\(task.title)")
+                    .font(.callout)
+                    .foregroundColor(Color(Constant.colorGray))
+                    .lineLimit(1)
+                Text("From: \(task.startDate?.getDay() ?? "")   To: \(task.endDate?.getDay() ?? "")")
+                    .font(.caption2)
+                    .foregroundColor(Color(Constant.colorGray))
+                    .lineLimit(1)
+            }
+            .padding(.leading, 6.0)
             Spacer()
-            Text(task.startDate?.getHour() ?? "")
-                .font(.caption.bold())
-                .foregroundColor(Color(Constant.colorGray))
-                .lineLimit(1)
-                .padding(.trailing, 6.0)
+            Image(systemName: task.isImportant ? "star.fill" : "star")
+                .font(.system(size: 16, weight: .medium, design: .default))
+                .foregroundColor(task.isImportant ? .yellow : Color(Constant.colorGray))
+                .padding(.trailing, 16.0)
+                .onTapGesture {
+                    model.importantChange(task)
+                }
         }
         .padding(0)
         .background(Color(hue: 0.683, saturation: 0.015, brightness: 0.138))
+        .onTapGesture {
+            detailSheet = true
+        }
+        .sheet(isPresented: $detailSheet) {
+            DetailScreen(showingSheet: $detailSheet, task: task)
+                .presentationDetents([.fraction(2/3)])
+        }
+    }
+    
+    @ViewBuilder
+    func createButton() ->some View {
+        VStack(alignment: .trailing) {
+            Spacer()
+            Button {
+                createSheet.toggle()
+            } label: {
+                Image(systemName: "plus.circle.fill")
+                    .font(.system(size: 60, weight: .medium, design: .default))
+                    .background(content: {
+                        Circle().foregroundColor(Color(Constant.colorGray))
+                            .frame(width: 60)
+                    })
+                    .foregroundColor(Color(Constant.colorRed))
+                    .alignTrailing()
+            }
+            .offset(CGSize(width: -10, height: -(24 + safeAreaInsets.top)))
+            
+        }
+        .sheet(isPresented: $createSheet) {
+            CreateTaskScreen(showingSheet: $createSheet, typeScreen: model.typeScreen ?? .currentTask)
+                .presentationDetents([.fraction(2/3)])
+        }
     }
 }
 
 struct CalendarScreen_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarScreen()
+        CalendarScreen(typeScreen: .currentTask)
     }
 }
