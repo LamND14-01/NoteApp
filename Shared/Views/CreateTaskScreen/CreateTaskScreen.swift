@@ -9,12 +9,12 @@ import SwiftUI
 
 struct CreateTaskScreen: View {
     @Binding var showingSheet: Bool
-    @ObservedObject var model = Model()
+    @ObservedObject var model: Model
     @State private var date = Date()
     
-    init(showingSheet: Binding<Bool>, typeScreen: Screen) {
+    init(showingSheet: Binding<Bool>, model: CreateTaskScreen.Model) {
         self._showingSheet = showingSheet
-        self.model.typeScreen = typeScreen
+        self.model = model
     }
     
     var body: some View {
@@ -86,6 +86,6 @@ struct CreateTaskScreen: View {
 
 struct CreateTaskScreen_Previews: PreviewProvider {
     static var previews: some View {
-        CreateTaskScreen(showingSheet: .constant(false), typeScreen: Screen.currentTask)
+        CreateTaskScreen(showingSheet: .constant(false), model: CreateTaskScreen.Model(typeScreen: .currentTask))
     }
 }

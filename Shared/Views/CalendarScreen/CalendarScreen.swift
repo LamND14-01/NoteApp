@@ -193,7 +193,7 @@ struct CalendarScreen: View {
             
         }
         .sheet(isPresented: $createSheet) {
-            CreateTaskScreen(showingSheet: $createSheet, typeScreen: model.typeScreen ?? .currentTask)
+            CreateTaskScreen(showingSheet: $createSheet, model: CreateTaskScreen.Model(typeScreen: model.typeScreen ?? .currentTask))
                 .presentationDetents([.fraction(2/3)])
         }
     }

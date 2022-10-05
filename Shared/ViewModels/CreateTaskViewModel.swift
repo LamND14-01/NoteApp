@@ -14,11 +14,12 @@ extension CreateTaskScreen {
         @Published var description: String
         @Published var startDate: Date = Date()
         @Published var endDate: Date = Date()
-        @Published var typeScreen: Screen?
+        @Published var typeScreen: Screen
         
-        init() {
+        init(typeScreen: Screen) {
             title = ""
             description = ""
+            self.typeScreen = typeScreen
         }
         
         func add() {
