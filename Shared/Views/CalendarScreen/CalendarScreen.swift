@@ -48,7 +48,7 @@ struct CalendarScreen: View {
                     CalendarView(currentDate: $model.currentDate, selectedDate: $model.selectedDate)
                         .padding(.horizontal, 8.0)
                 }
-
+                
                 if model.filteredTask().isEmpty, model.filteredCompletedTask().isEmpty {
                     Text("No tasks to do")
                         .font(.title3).bold()
@@ -123,6 +123,10 @@ struct CalendarScreen: View {
             }
             
         }
+        .sheet(isPresented: $detailSheet) {
+            DetailScreen(showingSheet: $detailSheet, model: DetailScreen.Model(task: model.selectedTask))
+                .presentationDetents([.fraction(2/3)])
+        }
         .ignoresSafeArea()
         .navigationBarHidden(true)
         .onAppear() {
@@ -133,16 +137,14 @@ struct CalendarScreen: View {
     @ViewBuilder
     func taskView(task: TaskValue) ->some View {
         HStack(spacing: 8) {
-            if model.isExpired(task.startDate) {
-                Rectangle()
-                    .frame(width: 3, height: 40)
-                    .foregroundColor(task.isSuccess ? .green : .red)
-                Image(systemName: task.isSuccess ? "text.badge.checkmark" : "calendar.badge.exclamationmark")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 18, height: 18)
-                    .foregroundColor(Color(Constant.colorGray))
-            }
+            Rectangle()
+                .frame(width: 3, height: 40)
+                .foregroundColor(model.isExpired(task.startDate) ? .red : (task.isSuccess ? .green : .clear))
+            Image(systemName: model.isExpired(task.startDate) ? "calendar.badge.exclamationmark" : (task.isSuccess ? "text.badge.checkmark" : "wallet.pass"))
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 18, height: 18)
+                .foregroundColor(Color(Constant.colorGray))
             VStack(alignment: .leading) {
                 Text("\(task.title)")
                     .font(.callout)
@@ -166,11 +168,8 @@ struct CalendarScreen: View {
         .padding(0)
         .background(Color(hue: 0.683, saturation: 0.015, brightness: 0.138))
         .onTapGesture {
+            model.selectedTask = task
             detailSheet = true
-        }
-        .sheet(isPresented: $detailSheet) {
-            DetailScreen(showingSheet: $detailSheet, task: task)
-                .presentationDetents([.fraction(2/3)])
         }
     }
     

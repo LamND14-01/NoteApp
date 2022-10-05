@@ -13,8 +13,8 @@ extension CalendarScreen {
         @Published var storedTasks: [TaskValue] = []
         @Published var currentDate: Date = Date()
         @Published var selectedDate: Date = Date()
-        @Published var newTask: TaskValue?
         @Published var typeScreen: Screen?
+        @Published var selectedTask: TaskValue = TaskValue()
         
         init() {
             TaskRespository.shared.$tasks.map({ tasks in
@@ -80,7 +80,7 @@ extension CalendarScreen {
         
         func completeTask(_ task: TaskValue) {
             var task = Task(task: task)
-            task.isSuccess = true
+            task.isSuccess.toggle()
             TaskRespository.shared.update(task)
         }
         
