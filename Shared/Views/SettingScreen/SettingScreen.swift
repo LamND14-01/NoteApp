@@ -12,12 +12,7 @@ struct SettingScreen: View {
     
     var body: some View {
         VStack {
-            Rectangle().frame(height: 100)
-                .foregroundColor(.pink)
-            Spacer()
-            TextField("asd", text: self.$text)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .ignoresSafeArea(.keyboard, edges: .bottom)
+            Text("SettingScreen")
         }
     }
 }
