@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+// Developing
 struct SettingScreen: View {
     @State var text: String = ""
     
@@ -18,9 +18,6 @@ struct SettingScreen: View {
             TextField("asd", text: self.$text)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .ignoresSafeArea(.keyboard, edges: .bottom)
-            Rectangle().frame(height: 100)
-                .foregroundColor(.pink)
-            
         }
     }
 }

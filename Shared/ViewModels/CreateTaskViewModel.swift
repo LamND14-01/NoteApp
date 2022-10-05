@@ -10,25 +10,24 @@ import Combine
  
 extension CreateTaskScreen {
     final class Model: ObservableObject {
-        @Published var currentDate: Date = Date()
-        @Published var selectedDate: Date = Date()
-        @Published var newTask: TaskValue?
         @Published var title: String
         @Published var description: String
         @Published var startDate: Date = Date()
         @Published var endDate: Date = Date()
+        @Published var typeScreen: Screen?
         
         init() {
-            newTask = TaskValue()
             title = ""
             description = ""
         }
         
         func add() {
-            let task = Task(title: title,
+            var task = Task(title: title,
                             description: description,
                             startDate: startDate.getStringDate(),
                             endDate: endDate.getStringDate())
+            task.isImportant = typeScreen == .important ? true : false
+            guard task.title != "" else { return }
             TaskRespository.shared.add(task)
         }
     }

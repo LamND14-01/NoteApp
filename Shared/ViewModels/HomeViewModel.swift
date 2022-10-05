@@ -13,9 +13,6 @@ import Combine
 extension HomeScreen {
     final class Model: ObservableObject {
         @Published var storedTasks: [TaskValue] = []
-        @Published var currentDate: Date = Date()
-        @Published var selectedDate: Date = Date()
-        @Published var newTask: TaskValue?
         
         init() {
             TaskRespository.shared.$tasks.map({ tasks in
@@ -24,10 +21,6 @@ extension HomeScreen {
                 })
             })
             .assign(to: &$storedTasks)
-        }
-        
-        func filteredTask() -> [TaskValue] {
-            return storedTasks
         }
     }
 }

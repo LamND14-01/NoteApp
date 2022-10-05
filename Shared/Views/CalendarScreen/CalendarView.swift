@@ -53,7 +53,7 @@ struct CalendarView: View {
                     }
                 }
                 Rectangle().frame(width: 0, height: 12)
-                LazyVGrid(columns: collumns, spacing: 16) {
+                LazyVGrid(columns: collumns, spacing: 0) {
                     ForEach(extractDate()) { value in
                         cardView(value: value)
                     }

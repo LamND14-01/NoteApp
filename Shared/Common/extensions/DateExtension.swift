@@ -35,6 +35,14 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    func getDay() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd"
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale.current
+        return dateFormatter.string(from: self)
+    }
+    
     func startOfDay() -> Date {
         var calendar = Calendar.current
         calendar.timeZone = TimeZone(abbreviation: "UTC")!

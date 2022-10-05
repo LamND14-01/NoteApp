@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A0E592A28EC953B00627C6D /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E592928EC953B00627C6D /* DetailScreen.swift */; };
+		5A0E592D28EC961A00627C6D /* DetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E592C28EC961A00627C6D /* DetailScreenViewModel.swift */; };
 		5A23635328C63BB4002B531D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635228C63BB4002B531D /* CalendarView.swift */; };
 		5A23635528C63BB4002B531D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635228C63BB4002B531D /* CalendarView.swift */; };
 		5A23635928C63FFB002B531D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23635828C63FFB002B531D /* DateExtension.swift */; };
@@ -38,6 +40,8 @@
 		5A8564CC28BE4773006C6B22 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8564CB28BE4773006C6B22 /* Tests_iOSLaunchTests.swift */; };
 		5A8564D928BE4773006C6B22 /* NoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8564B128BE4771006C6B22 /* NoteApp.swift */; };
 		5A8564DD28BE4773006C6B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A8564B328BE4772006C6B22 /* Assets.xcassets */; };
+		5A94865F28ED981A0099F726 /* DetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E592C28EC961A00627C6D /* DetailScreenViewModel.swift */; };
+		5A94866028ED981E0099F726 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E592928EC953B00627C6D /* DetailScreen.swift */; };
 		5ACB4BB928D20E7A000C1003 /* TaskRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB4BB828D20E7A000C1003 /* TaskRepositories.swift */; };
 		5ACB4BBB28D21DB0000C1003 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB4BBA28D21DB0000C1003 /* StringExtension.swift */; };
 		5ACF349E28C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF349D28C4E1BD00B62312 /* CurrentTaskScreen.swift */; };
@@ -77,6 +81,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A0E592928EC953B00627C6D /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
+		5A0E592C28EC961A00627C6D /* DetailScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenViewModel.swift; sourceTree = "<group>"; };
 		5A23635228C63BB4002B531D /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		5A23635828C63FFB002B531D /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		5A23635D28C640F4002B531D /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
@@ -138,6 +144,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A0E592B28EC954300627C6D /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E592928EC953B00627C6D /* DetailScreen.swift */,
+			);
+			path = DetailScreen;
+			sourceTree = "<group>";
+		};
 		5A23635728C63FDD002B531D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +165,7 @@
 		5A2B4D7A28C4DB4400DBDA9E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5A0E592B28EC954300627C6D /* DetailScreen */,
 				5A67B3E128DCC49000FC8BAE /* CreateTaskScreen */,
 				5ACF34A828C4E1F100B62312 /* SettingScreen */,
 				5ACF34A228C4E1C500B62312 /* CalendarScreen */,
@@ -166,6 +181,7 @@
 				5AE33F2E28CF7FCC0085C778 /* CalendarViewModel.swift */,
 				5A7F874628DDDF470075AA95 /* CreateTaskViewModel.swift */,
 				5A78387E28E33BE0000AE50B /* HomeViewModel.swift */,
+				5A0E592C28EC961A00627C6D /* DetailScreenViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -460,6 +476,7 @@
 				5A78387F28E33BE0000AE50B /* HomeViewModel.swift in Sources */,
 				5ACF34B928C4EC6D00B62312 /* TabBarView.swift in Sources */,
 				5A67B3E328DCC4BA00FC8BAE /* CreateTaskScreen.swift in Sources */,
+				5A0E592A28EC953B00627C6D /* DetailScreen.swift in Sources */,
 				5ACF34C428C4F94100B62312 /* Constant.swift in Sources */,
 				5AE33F2F28CF7FCC0085C778 /* CalendarViewModel.swift in Sources */,
 				5AE33F2128CF77B60085C778 /* ViewExtension.swift in Sources */,
@@ -470,6 +487,7 @@
 				5AE33F2628CF78FA0085C778 /* Task.swift in Sources */,
 				5A23635328C63BB4002B531D /* CalendarView.swift in Sources */,
 				5ACF34A428C4E1E400B62312 /* CalendarScreen.swift in Sources */,
+				5A0E592D28EC961A00627C6D /* DetailScreenViewModel.swift in Sources */,
 				5ACF349E28C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */,
 				5ACB4BB928D20E7A000C1003 /* TaskRepositories.swift in Sources */,
 				5ADEA68828E1ECC900970374 /* BaseView.swift in Sources */,
@@ -490,6 +508,7 @@
 				5A78387328E2CC20000AE50B /* Router.swift in Sources */,
 				5A6A46A628E9CA1D00051DC0 /* TaskRepositories.swift in Sources */,
 				5ACF34BB28C4EC6D00B62312 /* TabBarView.swift in Sources */,
+				5A94866028ED981E0099F726 /* DetailScreen.swift in Sources */,
 				5ACF34A028C4E1BD00B62312 /* CurrentTaskScreen.swift in Sources */,
 				5A23635B28C63FFB002B531D /* DateExtension.swift in Sources */,
 				5A7F874928DDDF470075AA95 /* CreateTaskViewModel.swift in Sources */,
@@ -501,6 +520,7 @@
 				5A23636028C640F4002B531D /* DateValue.swift in Sources */,
 				5A8564CA28BE4773006C6B22 /* Tests_iOS.swift in Sources */,
 				5A2B4D8228C4DCE800DBDA9E /* HomeScreen.swift in Sources */,
+				5A94865F28ED981A0099F726 /* DetailScreenViewModel.swift in Sources */,
 				5A6A46A728E9CA2100051DC0 /* BaseView.swift in Sources */,
 				5A6A46A828E9CA2700051DC0 /* StringExtension.swift in Sources */,
 				5A78387828E2D898000AE50B /* NaviBar.swift in Sources */,
