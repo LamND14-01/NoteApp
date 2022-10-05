@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct DetailScreen: View {
-    @ObservedObject var model = Model()
+    @ObservedObject var model: Model
     @Binding var showingSheet: Bool
-    
-    init(showingSheet: Binding<Bool> ,task: TaskValue) {
-        self.model = Model(task: task)
+    @State private var birthDate: Date = Calendar.current.date(byAdding: DateComponents(year: -40), to: Date()) ?? Date()
+    init(showingSheet: Binding<Bool> , model: DetailScreen.Model) {
+        self.model = model
         self._showingSheet = showingSheet
     }
     
@@ -80,6 +80,6 @@ struct DetailScreen: View {
 
 struct DetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        DetailScreen(showingSheet: .constant(false), task: TaskValue())
+        DetailScreen(showingSheet: .constant(false), model: DetailScreen.Model(task: TaskValue()))
     }
 }
