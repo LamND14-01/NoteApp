@@ -93,14 +93,7 @@ struct HomeScreen: View {
     
     @ViewBuilder 
     func navigate(_ router: Router) -> some View {
-        switch router.screen {
-        case .currentTask:
-            CalendarScreen(typeScreen: .currentTask)
-        case .important:
-            CalendarScreen(typeScreen: .important)
-        case .completed:
-            CalendarScreen(typeScreen: .completed)
-        }
+        CalendarScreen(typeScreen: router.screen)
     }
 }
 
