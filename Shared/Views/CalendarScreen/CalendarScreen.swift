@@ -129,7 +129,7 @@ struct CalendarScreen: View {
         }
         .ignoresSafeArea()
         .navigationBarHidden(true)
-        .onAppear() {
+        .onAppear {
             model.typeScreen = typeScreen
         }
     }
