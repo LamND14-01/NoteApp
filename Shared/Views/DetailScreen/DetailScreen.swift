@@ -38,6 +38,7 @@ struct DetailScreen: View {
                         .foregroundColor(.white)
                 }
                 .frame(height: 48)
+                .background(Color(hue: 0.683, saturation: 0.015, brightness: 0.138))
                 List {
                     TextField(text: $model.task.description, prompt: Text("Description").foregroundColor(Color(Constant.colorDarkGray))) {
                         Text("Password")
