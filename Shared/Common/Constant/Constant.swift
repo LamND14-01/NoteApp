@@ -50,4 +50,5 @@ struct Constant {
     static let colorRed: String = "red"
     static let colorDarkGray: String = "darkGray"
     static let dateFormat: String = "yyyy-MM-dd'T'HH:mm:ss"
+    static let weeklyNotifization = "lamnd.eloo.dev.NoteApp.weekly.notifization"
 }
