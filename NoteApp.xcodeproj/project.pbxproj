@@ -103,8 +103,6 @@
 		5A8564C528BE4773006C6B22 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8564C928BE4773006C6B22 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		5A8564CB28BE4773006C6B22 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
-		5A8564D528BE4773006C6B22 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
-		5A8564D728BE4773006C6B22 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		5A94866728EDCBCA0099F726 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5ACB4BB828D20E7A000C1003 /* TaskRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepositories.swift; sourceTree = "<group>"; };
 		5ACB4BBA28D21DB0000C1003 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -239,7 +237,6 @@
 				5A8564B028BE4771006C6B22 /* Shared */,
 				5A8564BF28BE4773006C6B22 /* macOS */,
 				5A8564C828BE4773006C6B22 /* Tests iOS */,
-				5A8564D428BE4773006C6B22 /* Tests macOS */,
 				5A8564B928BE4772006C6B22 /* Products */,
 				5A6A469C28E9C90900051DC0 /* Frameworks */,
 			);
@@ -286,15 +283,6 @@
 				5A8564CB28BE4773006C6B22 /* Tests_iOSLaunchTests.swift */,
 			);
 			path = "Tests iOS";
-			sourceTree = "<group>";
-		};
-		5A8564D428BE4773006C6B22 /* Tests macOS */ = {
-			isa = PBXGroup;
-			children = (
-				5A8564D528BE4773006C6B22 /* Tests_macOS.swift */,
-				5A8564D728BE4773006C6B22 /* Tests_macOSLaunchTests.swift */,
-			);
-			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
 		5ACB4BB728D20E4F000C1003 /* Repositories */ = {
