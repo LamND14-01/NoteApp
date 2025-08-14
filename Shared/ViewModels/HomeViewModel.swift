@@ -15,7 +15,7 @@ extension HomeScreen {
         @Published var storedTasks: [TaskValue] = []
         
         init() {
-            TaskRespository.shared.$tasks.map({ tasks in
+            TaskRepository.shared.$tasks.map({ tasks in
                 tasks.map({ task in
                     TaskValue(task: task)
                 })

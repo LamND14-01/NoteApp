@@ -1,5 +1,5 @@
 //
-//  TaskRepositories.swift
+//  TaskRepository.swift
 //  NoteApp (iOS)
 //
 //  Created by Eloo on 14/09/2022.
@@ -11,8 +11,8 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import Combine
 
-class TaskRespository: ObservableObject {
-    static let shared = TaskRespository()
+class TaskRepository: ObservableObject {
+    static let shared = TaskRepository()
     private let store = Firestore.firestore()
     private let path = "tasks"
     @Published var tasks: [Task] = []
@@ -56,9 +56,9 @@ class TaskRespository: ObservableObject {
         }
         store.collection(path).document(taskID).delete { error in
             if let error = error {
-                print("Unable to update task: \(error.localizedDescription)")
+                print("Unable to delete task: \(error.localizedDescription)")
             }
         }
     }
-    
+
 }
