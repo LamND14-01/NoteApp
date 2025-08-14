@@ -29,7 +29,7 @@ extension CreateTaskScreen {
                             endDate: endDate.getStringDate())
             task.isImportant = typeScreen == .important ? true : false
             guard task.title != "" else { return }
-            TaskRespository.shared.add(task)
+            TaskRepository.shared.add(task)
         }
     }
 }

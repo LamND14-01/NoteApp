@@ -26,7 +26,7 @@ extension DetailScreen {
             task.startDate = self.startDate
             task.endDate = self.endDate
             let task = Task(task: task)
-            TaskRespository.shared.update(task)
+            TaskRepository.shared.update(task)
         }
     }
 }

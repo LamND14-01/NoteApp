@@ -17,7 +17,7 @@ extension CalendarScreen {
         @Published var selectedTask: TaskValue = TaskValue()
         
         init() {
-            TaskRespository.shared.$tasks.map({ tasks in
+            TaskRepository.shared.$tasks.map({ tasks in
                 tasks.map({ task in
                     TaskValue(task: task)
                 })
@@ -81,18 +81,18 @@ extension CalendarScreen {
         func completeTask(_ task: TaskValue) {
             var task = Task(task: task)
             task.isSuccess.toggle()
-            TaskRespository.shared.update(task)
+            TaskRepository.shared.update(task)
         }
         
         func importantChange(_ task: TaskValue) {
             var task = Task(task: task)
             task.isImportant.toggle()
-            TaskRespository.shared.update(task)
+            TaskRepository.shared.update(task)
         }
         
         func deleteTask(_ task: TaskValue) {
             let task = Task(task: task)
-            TaskRespository.shared.delete(task)
+            TaskRepository.shared.delete(task)
         }
     }
 }
